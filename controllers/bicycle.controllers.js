@@ -13,7 +13,7 @@ module.exports = {
     });
     try {
       const savedBicycle = await bicycle.save();
-      res.json(savedBicycle);
+      res.status(201).json(savedBicycle);
     } catch (err) {
       res.json({ message: err });
     }
@@ -22,7 +22,7 @@ module.exports = {
   getAllBicycles: async function (req, res) {
     try {
       const bicycles = await Bicycle.find();
-      res.json(bicycles);
+      res.status(200).json(bicycles);
     } catch (err) {
       res.json({ message: err });
     }
@@ -31,7 +31,7 @@ module.exports = {
   removeBicycle: async function (req, res) {
     try {
       const deletedBicycle = await Bicycle.deleteOne({ _id: req.params.id });
-      res.json(deletedBicycle);
+      res.status(200).json(deletedBicycle);
     } catch (err) {
       res.json({ message: err });
     }
@@ -42,7 +42,7 @@ module.exports = {
       const deletedBicycles = await Bicycle.deleteMany({}, () =>
         console.log("All bicycles has been deleted!")
       );
-      res.json(deletedBicycles);
+      res.status(200).json(deletedBicycles);
     } catch (err) {
       res.json({ message: err });
     }
@@ -63,7 +63,7 @@ module.exports = {
           },
         }
       );
-      res.json(updatedBicycle);
+      res.status(201).json(updatedBicycle);
     } catch (err) {
       res.json({ message: err });
     }
@@ -75,7 +75,7 @@ module.exports = {
       if (err) {
         res.json({ message: err });
       } else {
-        res.json(count);
+        res.status(200).json(count);
       }
     });
   },
@@ -90,7 +90,7 @@ module.exports = {
           },
         }
       );
-      res.json(updatedBicycle);
+      res.status(201).json(updatedBicycle);
     } catch (err) {
       res.json({ message: err });
     }
@@ -102,7 +102,7 @@ module.exports = {
       if (err) {
         res.json({ message: err });
       } else {
-        res.json(count);
+        res.status(200).json(count);
       }
     });
   },
@@ -119,7 +119,7 @@ module.exports = {
       if (err) {
         res.json({ message: err });
       } else {
-        res.json(countPrice / count)
+        res.status(200).json(countPrice / count);
       }
     });
   },
