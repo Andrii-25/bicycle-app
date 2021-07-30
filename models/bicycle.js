@@ -25,6 +25,11 @@ const bicycleSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  status: {
+    type: String,
+    required: true,
+    default: "available",
+  },
 });
 
 module.exports = mongoose.model("Bicycles", bicycleSchema);
