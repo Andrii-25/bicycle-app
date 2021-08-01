@@ -22,7 +22,11 @@ module.exports = {
   getAllBicycles: async function (req, res) {
     try {
       const bicycles = await Bicycle.find();
-      res.status(200).json(bicycles);
+      if (bicycles.length === 0) {
+        res.json({ message: "Bicycles list is empty" });
+      } else {
+        res.status(200).json(bicycles);
+      }
     } catch (err) {
       res.json({ message: err });
     }
@@ -75,7 +79,7 @@ module.exports = {
       if (err) {
         res.json({ message: err });
       } else {
-        res.status(200).json(count);
+        res.status(200).json({ countOfBicycles: count });
       }
     });
   },
@@ -102,7 +106,7 @@ module.exports = {
       if (err) {
         res.json({ message: err });
       } else {
-        res.status(200).json(count);
+        res.status(200).json({ countOfAvailable: count });
       }
     });
   },
@@ -119,7 +123,7 @@ module.exports = {
       if (err) {
         res.json({ message: err });
       } else {
-        res.status(200).json(countPrice / count);
+        res.status(200).json({ avg_price: Math.round(countPrice / count) });
       }
     });
   },
