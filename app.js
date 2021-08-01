@@ -15,8 +15,10 @@ mongoose.connect(
   process.env.DB_CONNECTION,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
-    console.log("Connected to DB!");
+    console.log(`Connected to DB: ${process.env.DB_CONNECTION}`);
   }
 );
 
-app.listen(process.env.PORT || 8000);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("App is running...");
+});
