@@ -50,6 +50,8 @@ Connected to mongodb:YOUR_DB_CONNECTION_STRING
 
 **Note:** `YOUR_DB_CONNECTION_STRING` will be your MongoDB connection string.
 
+## Routes
+
 ### GET Routes
 
 - /bicycles - to get all bicycles
@@ -71,5 +73,5 @@ Connected to mongodb:YOUR_DB_CONNECTION_STRING
 - /bicycles - to remove all bicycles
 - /bicycles/:id - to remove one bicycle
 
-### Link to deployed app
+## Link to deployed app
 - http://18.221.6.130:3000/bicycles
