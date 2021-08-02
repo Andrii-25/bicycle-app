@@ -2,7 +2,7 @@
 
 ## How to install
 
-### Using Git (recommended)
+### Using Git
 
 1.  Clone the project from github. Change "myproject" to your project name.
 
