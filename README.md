@@ -33,6 +33,7 @@ npm install
 3.  The file `.env` is already ignored, so you never commit your credentials.
 4.  Change the values of the file to your environment.
 
+
 ## How to run
 
 ### Running API server locally
@@ -49,6 +50,7 @@ Connected to mongodb:YOUR_DB_CONNECTION_STRING
 ```
 
 **Note:** `YOUR_DB_CONNECTION_STRING` will be your MongoDB connection string.
+
 
 ## Routes
 
@@ -72,6 +74,7 @@ Connected to mongodb:YOUR_DB_CONNECTION_STRING
 
 - /bicycles - to remove all bicycles
 - /bicycles/:id - to remove one bicycle
+
 
 ## Link to deployed app
 - http://18.221.6.130:3000/bicycles
