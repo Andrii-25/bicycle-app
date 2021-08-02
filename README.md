@@ -26,6 +26,7 @@ npm install
 
 1.  You will find a file named `.env.example` on root directory of project.
 2.  Create a new file by copying and pasting the file and then renaming it to just `.env`
+
     ```bash
     cp .env.example .env
     ```
@@ -48,3 +49,24 @@ Connected to mongodb:YOUR_DB_CONNECTION_STRING
 ```
 
 **Note:** `YOUR_DB_CONNECTION_STRING` will be your MongoDB connection string.
+
+### GET Routes
+
+- /bicycles - to get all bicycles
+- /bicycles/count - to get count of bicycles
+- /bicycles/available - to get count of available bicycles
+- /bicycles/price/avg - to get avg price of bicycles
+
+### POST Routes
+
+- /bicycles - to add one bicycle
+
+### PATCH Routes
+
+- /bicycles/:id - to update one bicycle
+- /bicycles/status/:id - to update status of one bicycle
+
+### DELETE Routes
+
+- /bicycles - to remove all bicycles
+- /bicycles/:id - to remove one bicycle
